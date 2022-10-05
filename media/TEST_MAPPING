@@ -1,0 +1,30 @@
+// for frameworks/av/media
+{
+    // TODO (b/229286407) Add EncodeDecodeTest and DecodeEditEncodeTest to
+    // presubmit-large once issues in cuttlefish are fixed
+    "presubmit": [
+        {
+            "name": "GtsMediaTestCases",
+            "options" : [
+                {
+                    "include-annotation": "android.platform.test.annotations.Presubmit"
+                },
+                {
+                    "include-filter": "com.google.android.media.gts.WidevineGenericOpsTests"
+                },
+                {
+                    "include-filter": "com.google.android.media.gts.WidevineH264PlaybackTests"
+                }
+            ]
+        }
+    ],
+
+    "imports": [
+        {
+            "path": "frameworks/av/drm/mediadrm/plugins"
+        }
+    ]
+
+    // TODO (b/229286407) Add EncodeDecodeTest and DecodeEditEncodeTest to
+    // platinum-postsubmit once issues in cuttlefish are fixed
+}
